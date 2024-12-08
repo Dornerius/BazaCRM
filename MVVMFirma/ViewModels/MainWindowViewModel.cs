@@ -41,7 +41,7 @@ namespace MVVMFirma.ViewModels
 
                 new CommandViewModel(
                     "Towar",
-                    new BaseCommand(() => this.CreateTowar())),
+                    new BaseCommand(() => this.CreateView(new NowyTowarViewModel()))),
 
                 new CommandViewModel(
                     "Wszystkie Faktury",
@@ -49,7 +49,7 @@ namespace MVVMFirma.ViewModels
 
                 new CommandViewModel(
                     "Faktura",
-                    new BaseCommand(() => this.CreateFaktura()))
+                    new BaseCommand(() => this.CreateView(new NowaFakturaViewModel())))
             };
         }
         #endregion
@@ -87,18 +87,18 @@ namespace MVVMFirma.ViewModels
         #endregion // Workspaces
 
         #region Private Helpers
-        private void CreateTowar()
+        private void CreateView(WorkspaceViewModel nowy)
         {
-            NowyTowarViewModel workspace = new NowyTowarViewModel();
-            this.Workspaces.Add(workspace);
-            this.SetActiveWorkspace(workspace);
+            
+            this.Workspaces.Add(nowy);
+            this.SetActiveWorkspace(nowy);
         }
-        private void CreateFaktura()
-        {
-            NowaFakturaViewModel workspace = new NowaFakturaViewModel();
-            this.Workspaces.Add(workspace);
-            this.SetActiveWorkspace(workspace);
-        }
+        //private void CreateFaktura()
+        //{
+        //    NowaFakturaViewModel workspace = new NowaFakturaViewModel();
+        //    this.Workspaces.Add(workspace);
+        //    this.SetActiveWorkspace(workspace);
+        //}
         private void ShowAllTowar()
         {
             WszystkieTowaryViewModel workspace =
