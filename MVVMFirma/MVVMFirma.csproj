@@ -39,8 +39,17 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -63,6 +72,78 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Helper\BaseCommand.cs" />
+    <Compile Include="Models\Entieties\Faktury.cs">
+      <DependentUpon>ModelCMR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entieties\InterakcjeKlientow.cs">
+      <DependentUpon>ModelCMR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entieties\Klienci.cs">
+      <DependentUpon>ModelCMR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entieties\LogiSystemowe.cs">
+      <DependentUpon>ModelCMR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entieties\ModelCMR.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCMR.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entieties\ModelCMR.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCMR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entieties\ModelCMR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCMR.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entieties\ProduktyUslugi.cs">
+      <DependentUpon>ModelCMR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entieties\Projekty.cs">
+      <DependentUpon>ModelCMR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entieties\RelacjeMiedzyKlientami.cs">
+      <DependentUpon>ModelCMR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entieties\RodzajePlatnosci.cs">
+      <DependentUpon>ModelCMR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entieties\StatusFaktury.cs">
+      <DependentUpon>ModelCMR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entieties\Statusy.cs">
+      <DependentUpon>ModelCMR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entieties\sysdiagrams.cs">
+      <DependentUpon>ModelCMR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entieties\Szkolenia.cs">
+      <DependentUpon>ModelCMR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entieties\Transakcje.cs">
+      <DependentUpon>ModelCMR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entieties\TypyInterakcji.cs">
+      <DependentUpon>ModelCMR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entieties\Uzytkownicy.cs">
+      <DependentUpon>ModelCMR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entieties\Zadania.cs">
+      <DependentUpon>ModelCMR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entieties\Zamowienia.cs">
+      <DependentUpon>ModelCMR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entieties\ZapytaniaKlientow.cs">
+      <DependentUpon>ModelCMR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entieties\Zespoly.cs">
+      <DependentUpon>ModelCMR.tt</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\CommandViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
@@ -106,6 +187,14 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
+    <EntityDeploy Include="Models\Entieties\ModelCMR.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelCMR.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\Entieties\ModelCMR.edmx.diagram">
+      <DependentUpon>ModelCMR.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -113,6 +202,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -138,8 +231,21 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Content Include="Models\Entieties\ModelCMR.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelCMR.Context.cs</LastGenOutput>
+      <DependentUpon>ModelCMR.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Entieties\ModelCMR.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelCMR.edmx</DependentUpon>
+      <LastGenOutput>ModelCMR.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

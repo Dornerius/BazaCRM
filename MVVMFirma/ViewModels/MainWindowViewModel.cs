@@ -37,7 +37,7 @@ namespace MVVMFirma.ViewModels
             {
                 new CommandViewModel(
                     "Towary",
-                    new BaseCommand(() => this.ShowAllTowar())),
+                    new BaseCommand(() => this.ShowAllView<WszystkieTowaryViewModel>())),
 
                 new CommandViewModel(
                     "Towar",
@@ -45,11 +45,11 @@ namespace MVVMFirma.ViewModels
 
                 new CommandViewModel(
                     "Wszystkie Faktury",
-                    new BaseCommand(() => this.ShowAllFaktury())),
+                    new BaseCommand(() => this.ShowAllView<WszystkieFakturyViewModel>())),
 
                 new CommandViewModel(
                     "Faktura",
-                    new BaseCommand(() => this.CreateView(new NowaFakturaViewModel())))
+                    new BaseCommand(() => this.CreateView( new NowaFakturaViewModel())))
             };
         }
         #endregion
@@ -99,32 +99,30 @@ namespace MVVMFirma.ViewModels
         //    this.Workspaces.Add(workspace);
         //    this.SetActiveWorkspace(workspace);
         //}
-        private void ShowAllTowar()
+        private void ShowAllView<T>() where T : WorkspaceViewModel, new()
         {
-            WszystkieTowaryViewModel workspace =
-                this.Workspaces.FirstOrDefault(vm => vm is WszystkieTowaryViewModel)
-                as WszystkieTowaryViewModel;
+            T workspace = this.Workspaces.FirstOrDefault(vm => vm is T) as T;
             if (workspace == null)
             {
-                workspace = new WszystkieTowaryViewModel();
+                workspace = new T();
                 this.Workspaces.Add(workspace);
             }
 
             this.SetActiveWorkspace(workspace);
         }
-        private void ShowAllFaktury()
-        {
-            WszystkieFakturyViewModel workspace =
-                this.Workspaces.FirstOrDefault(vm => vm is WszystkieFakturyViewModel)
-                as WszystkieFakturyViewModel;
-            if (workspace == null)
-            {
-                workspace = new WszystkieFakturyViewModel();
-                this.Workspaces.Add(workspace);
-            }
+        //private void ShowAllFaktury()
+        //{
+        //    WszystkieFakturyViewModel workspace =
+        //        this.Workspaces.FirstOrDefault(vm => vm is WszystkieFakturyViewModel)
+        //        as WszystkieFakturyViewModel;
+        //    if (workspace == null)
+        //    {
+        //        workspace = new WszystkieFakturyViewModel();
+        //        this.Workspaces.Add(workspace);
+        //    }
 
-            this.SetActiveWorkspace(workspace);
-        }
+        //    this.SetActiveWorkspace(workspace);
+        //}
         private void SetActiveWorkspace(WorkspaceViewModel workspace)
         {
             Debug.Assert(this.Workspaces.Contains(workspace));
