@@ -22,5 +22,10 @@ namespace MVVMFirma.Views
         {
             InitializeComponent();
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

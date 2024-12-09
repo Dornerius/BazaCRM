@@ -49,7 +49,7 @@ namespace MVVMFirma.ViewModels
 
                 new CommandViewModel(
                     "Faktura",
-                    new BaseCommand(() => this.CreateView( new NowaFakturaViewModel())))
+                    new BaseCommand(() => this.CreateView(new NowaFakturaViewModel())))
             };
         }
         #endregion

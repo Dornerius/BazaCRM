@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 namespace MVVMFirma.ViewModels
 {
@@ -10,7 +10,7 @@ namespace MVVMFirma.ViewModels
     {
         public WszystkieFakturyViewModel()
         {
-            base.DisplayName = "Wszystkie Faktury";
+            base.DisplayName = "Faktury";
 
         }
     }
