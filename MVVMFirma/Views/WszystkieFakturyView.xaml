@@ -7,8 +7,22 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
 
-    <Grid Background="White">
-        <Label Content="To jest UC Wszystkie Towary"></Label>
+    <Grid Background="White">        
+        <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding List}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id Faktury"/>
+                <DataGridTextColumn Header="Id Produktu Uslugi"/>
+                <DataGridTextColumn Header="Id Rodzaju Platnosci"/>
+                <DataGridTextColumn Header="Data Wystawienia"/>
+                <DataGridTextColumn Header="Id Klienta"/>
+                <DataGridTextColumn Header="Osobowosc prawna"/>
+                <DataGridTextColumn Header="Kwota Netto"/>
+                <DataGridTextColumn Header="Kwota Brutto"/>
+                <DataGridTextColumn Header="Podatek"/>
+                <DataGridTextColumn Header="Ilosc sztuk"/>
+                <DataGridTextColumn Header="Id Statusu Faktury"/>                
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </local:WszystkieViewBase>

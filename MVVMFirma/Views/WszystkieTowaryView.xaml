@@ -6,9 +6,35 @@
              xmlns:local="clr-namespace:MVVMFirma.Views"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-        
-    <Grid Background="White">
-        <Label Content="To jest UC Wszystkie Towary"></Label>
 
+    <Grid Background="White">
+        <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding List}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id Klienta" Binding="{Binding IdKlienta}"/>
+                <DataGridTextColumn Header="Id Uzytkownika" Binding="{Binding IdUzytkownika}"/>
+                <DataGridTextColumn Header="Id Zespolu" Binding="{Binding IdZespolu}"/>
+                <DataGridTextColumn Header="Id Projetku" Binding="{Binding IdProjektu}"/>
+                <DataGridTextColumn Header="Nazwa Firmy" Binding="{Binding NazwaFirmy}"/>
+                <DataGridTextColumn Header="Osobowosc prawna" Binding="{Binding OsobowoscPrawna}"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                <DataGridTextColumn Header="Telefon" Binding="{Binding telefon}"/>
+                <DataGridTextColumn Header="Wojewodztwo" Binding="{Binding Wojewodztwo}"/>
+                <DataGridTextColumn Header="Kod Pocztowy" Binding="{Binding KodPocztowy}"/>
+                <DataGridTextColumn Header="Powiat" Binding="{Binding Powiat}"/>
+                <DataGridTextColumn Header="Miejscowosc" Binding="{Binding Miejscowosc}"/>
+                <DataGridTextColumn Header="Ulica" Binding="{Binding Ulica}"/>
+                <DataGridTextColumn Header="Nr Budynku" Binding="{Binding NrBudynku}"/>
+                <DataGridTextColumn Header="Nr Lokalu" Binding="{Binding NrLokalu}"/>
+                <DataGridTextColumn Header="Poczta" Binding="{Binding Poczta}"/>
+                <DataGridTextColumn Header="Regon" Binding="{Binding Regon}"/>
+                <DataGridTextColumn Header="NIP" Binding="{Binding Nip}"/>
+                <DataGridTextColumn Header="KRS" Binding="{Binding Krs}"/>
+                <DataGridTextColumn Header="Media Spolecznosciowe" Binding="{Binding MediaSpolecznosciowe}"/>
+                <DataGridTextColumn Header="Dodatkowe Informacje" Binding="{Binding DodatkoweInformacje}"/>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
+    
 </local:WszystkieViewBase>
