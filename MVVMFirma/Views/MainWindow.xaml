@@ -51,11 +51,11 @@
         </Border>
         <StatusBar Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2">
             <StatusBarItem>
-                <TextBlock>Artur Kornatka</TextBlock>
+                <TextBlock>XXXXXX</TextBlock>
             </StatusBarItem>
             <Separator/>
             <StatusBarItem>
-                <TextBlock>WSB-NLU</TextBlock>
+                <TextBlock>XXXXXXX</TextBlock>
             </StatusBarItem>
         </StatusBar>
     </Grid>
