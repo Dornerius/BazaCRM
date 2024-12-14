@@ -36,7 +36,7 @@ namespace MVVMFirma.Models.Entieties
         public string OsobowoscPrawna { get; set; }
         public string Email { get; set; }
         public Nullable<int> telefon { get; set; }
-        public string Województwo { get; set; }
+        public string Wojewodztwo { get; set; }
         public string KodPocztowy { get; set; }
         public string Powiat { get; set; }
         public string Miejscowosc { get; set; }

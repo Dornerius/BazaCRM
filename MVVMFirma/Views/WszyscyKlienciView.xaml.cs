@@ -15,16 +15,15 @@ using System.Windows.Shapes;
 namespace MVVMFirma.Views
 {
     /// <summary>
-    /// Interaction logic for NowyTowarView.xaml
+    /// Interaction logic for WszyscyKlienciView.xaml
     /// </summary>
-    public partial class NowyTowarView : JedenViewBase
+    public partial class WszyscyKlienciView : WszystkieViewBase
     {
-        public NowyTowarView()
+        public WszyscyKlienciView()
         {
             InitializeComponent();
         }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

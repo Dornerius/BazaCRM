@@ -8,19 +8,18 @@
              d:DesignHeight="300" d:DesignWidth="300">
 
     <Grid Background="White">        
-        <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding List}">
+        <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding List}" SelectionChanged="DataGrid_SelectionChanged">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Id Faktury"/>
-                <DataGridTextColumn Header="Id Produktu Uslugi"/>
-                <DataGridTextColumn Header="Id Rodzaju Platnosci"/>
-                <DataGridTextColumn Header="Data Wystawienia"/>
-                <DataGridTextColumn Header="Id Klienta"/>
-                <DataGridTextColumn Header="Osobowosc prawna"/>
-                <DataGridTextColumn Header="Kwota Netto"/>
-                <DataGridTextColumn Header="Kwota Brutto"/>
-                <DataGridTextColumn Header="Podatek"/>
-                <DataGridTextColumn Header="Ilosc sztuk"/>
-                <DataGridTextColumn Header="Id Statusu Faktury"/>                
+                <DataGridTextColumn Header="Id Faktury" Binding="{Binding IdFaktury}"/>
+                <DataGridTextColumn Header="Id Produktu Uslugi" Binding="{Binding IdProduktuUslugi}"/>
+                <DataGridTextColumn Header="Id Rodzaju Platnosci" Binding="{Binding IdRodzajuPlatnosci}"/>
+                <DataGridTextColumn Header="Data Wystawienia" Binding="{Binding DataWystawienia}"/>
+                <DataGridTextColumn Header="Id Klienta" Binding="{Binding IdKlienta}"/>
+                <DataGridTextColumn Header="Kwota Netto" Binding="{Binding KwotaNetto}"/>
+                <DataGridTextColumn Header="Kwota Brutto" Binding="{Binding KwotaBrutto}"/>
+                <DataGridTextColumn Header="Podatek" Binding="{Binding Podatek}"/>
+                <DataGridTextColumn Header="Ilosc sztuk" Binding="{Binding IloscSztuk}"/>
+                <DataGridTextColumn Header="Id Statusu Faktury" Binding="{Binding IdStatusuFaktury}"/>                
             </DataGrid.Columns>
         </DataGrid>
 

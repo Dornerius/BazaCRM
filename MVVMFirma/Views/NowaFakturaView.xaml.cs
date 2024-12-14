@@ -15,13 +15,19 @@ using System.Windows.Shapes;
 namespace MVVMFirma.Views
 {
     /// <summary>
-    /// Interaction logic for NowaFakturaView.xaml
+    /// Interaction logic for NowyTowarView.xaml
     /// </summary>
-    public partial class NowaFakturaView : UserControl
+    public partial class NowaFakturaView : JedenViewBase
     {
         public NowaFakturaView()
         {
             InitializeComponent();
+        }
+
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

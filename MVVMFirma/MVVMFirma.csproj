@@ -148,10 +148,10 @@
     <Compile Include="ViewModels\CommandViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\NowaFakturaViewModel.cs" />
-    <Compile Include="ViewModels\NowyTowarViewModel.cs" />
+    <Compile Include="ViewModels\NowyKlientViewModel.cs" />
     <Compile Include="ViewModels\WorkspaceViewModel.cs" />
     <Compile Include="ViewModels\WszystkieFakturyViewModel.cs" />
-    <Compile Include="ViewModels\WszystkieTowaryViewModel.cs" />
+    <Compile Include="ViewModels\WszyscyKlienciViewModel.cs" />
     <Compile Include="ViewModels\WszystkieViewModel.cs" />
     <Compile Include="Views\JedenViewBase.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
@@ -160,14 +160,14 @@
     <Compile Include="Views\NowaFakturaView.xaml.cs">
       <DependentUpon>NowaFakturaView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\NowyTowarView.xaml.cs">
-      <DependentUpon>NowyTowarView.xaml</DependentUpon>
+    <Compile Include="Views\NowyKlientView.cs">
+      <DependentUpon>NowyKlientView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\WszystkieFakturyView.xaml.cs">
       <DependentUpon>WszystkieFakturyView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\WszystkieTowaryView.xaml.cs">
-      <DependentUpon>WszystkieTowaryView.xaml</DependentUpon>
+    <Compile Include="Views\WszyscyKlienciView.xaml.cs">
+      <DependentUpon>WszyscyKlienciView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\WszystkieViewBase.cs" />
   </ItemGroup>
@@ -221,7 +221,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\NowyTowarView.xaml">
+    <Page Include="Views\NowyKlientView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -229,7 +229,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\WszystkieTowaryView.xaml">
+    <Page Include="Views\WszyscyKlienciView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

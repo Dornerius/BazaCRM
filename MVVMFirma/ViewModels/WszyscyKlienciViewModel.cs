@@ -10,25 +10,22 @@ using System.Net;
 
 namespace MVVMFirma.ViewModels
 {
-    public class WszystkieTowaryViewModel : WszystkieViewModel<Klienci>
+    public class WszyscyKlienciViewModel : WszystkieViewModel<Klienci>
     {
         
 
         #region Constructor
-        public WszystkieTowaryViewModel()
+        public WszyscyKlienciViewModel()
             :base("Klienci")
             { 
             }
         #endregion
         #region Helpers
 
-        public override void Load()
-        { 
-            List = new ObservableCollection<Klienci>
-                (
-                    bazaCRMEntities.Klienci.ToList()
-                );
-        }
+        //public override void Load() => List = new ObservableCollection<Klienci>
+                //(
+                    //bazaCRMEntities.Klienci.ToList()
+               // );
 
         #endregion
 

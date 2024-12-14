@@ -881,7 +881,7 @@
           <Property Name="OsobowoscPrawna" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="telefon" Type="Int32" />
-          <Property Name="Województwo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Wojewodztwo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="KodPocztowy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Powiat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Miejscowosc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -1784,7 +1784,7 @@
                 <ScalarProperty Name="OsobowoscPrawna" ColumnName="OsobowoscPrawna" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="telefon" ColumnName="telefon" />
-                <ScalarProperty Name="Województwo" ColumnName="Województwo" />
+                <ScalarProperty Name="Wojewodztwo" ColumnName="Województwo" />
                 <ScalarProperty Name="KodPocztowy" ColumnName="KodPocztowy" />
                 <ScalarProperty Name="Powiat" ColumnName="Powiat" />
                 <ScalarProperty Name="Miejscowosc" ColumnName="Miejscowosc" />
