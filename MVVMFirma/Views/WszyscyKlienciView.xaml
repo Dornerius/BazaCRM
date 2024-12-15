@@ -5,10 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:MVVMFirma.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="800" d:DesignWidth="600">
 
     <Grid Background="White">
-        <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding List}">
+        <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding List}" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id Klienta" Binding="{Binding IdKlienta}"/>
                 <DataGridTextColumn Header="Id Uzytkownika" Binding="{Binding IdUzytkownika}"/>
@@ -31,8 +31,6 @@
                 <DataGridTextColumn Header="KRS" Binding="{Binding Krs}"/>
                 <DataGridTextColumn Header="Media Spolecznosciowe" Binding="{Binding MediaSpolecznosciowe}"/>
                 <DataGridTextColumn Header="Dodatkowe Informacje" Binding="{Binding DodatkoweInformacje}"/>
-
-
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

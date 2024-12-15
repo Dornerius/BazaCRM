@@ -8,9 +8,13 @@ using System.Windows.Input;
 
 namespace MVVMFirma.ViewModels
 {
-    
+
     public class NowyKlientViewModel : WorkspaceViewModel
     {
+        //public NowyKlientViewModel()
+        //{
+        //    base.DisplayName = "Dodaj Nowego Klienta";
+        //}
         #region DB
         private BazaCRMEntities BazaCRMEntities;
 
@@ -23,12 +27,12 @@ namespace MVVMFirma.ViewModels
         private BaseCommand _SaveCommand;
         public ICommand SaveCommand
         {
-            get 
-            { 
-                if(_SaveCommand == null)
-                    _SaveCommand=new BaseCommand(()  => Save() );
-                return _SaveCommand; 
-            } 
+            get
+            {
+                if (_SaveCommand == null)
+                    _SaveCommand = new BaseCommand(() => Save());
+                return _SaveCommand;
+            }
         }
         #endregion
         #region Constructor
@@ -36,7 +40,7 @@ namespace MVVMFirma.ViewModels
         {
             base.DisplayName = "Dodaj Klienta";
             BazaCRMEntities = new BazaCRMEntities();
-            klienci = new Klienci(); 
+            klienci = new Klienci();
         }
         #endregion
         #region Properties
@@ -254,9 +258,9 @@ namespace MVVMFirma.ViewModels
             BazaCRMEntities.SaveChanges();
         }
         public void SaveAndClole()
-        { 
+        {
             Save();
-            base.OnRequestClose();           
+            base.OnRequestClose();
         }
         #endregion
 

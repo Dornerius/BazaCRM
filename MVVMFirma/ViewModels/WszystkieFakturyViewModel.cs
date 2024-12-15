@@ -17,8 +17,8 @@ namespace MVVMFirma.ViewModels
         #region Constructor
         public WszystkieFakturyViewModel()
             : base("Faktury")
-        {
-        }
+            {
+            }
         #endregion
         #region Helpers
 

@@ -6,22 +6,22 @@
              xmlns:local="clr-namespace:MVVMFirma.Views" xmlns:viewmodels="clr-namespace:MVVMFirma.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:NowaFakturaViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="500" Width="910">
-    <Grid Background="White" HorizontalAlignment="Stretch" Height="NaN" Margin="0,2,0,2" VerticalAlignment="Stretch" Width="NaN">
+    <Grid Background="AliceBlue" HorizontalAlignment="Stretch" Height="NaN" Margin="0,2,0,2" VerticalAlignment="Stretch" Width="NaN">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="125"/>
+            <ColumnDefinition Width="300"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>            
-            <RowDefinition Height="*"/>            
-            <RowDefinition Height="*"/>            
-            <RowDefinition Height="*"/>            
-            <RowDefinition Height="*"/>            
-            <RowDefinition Height="*"/>            
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
         <Label Grid.Column="0" Grid.Row="0" Margin="0,8,0,8" Content="Id Faktury"/>
         <TextBox Grid.Column="1" Grid.Row="0" Margin="0,8,0,8"/>
@@ -47,11 +47,11 @@
         <Label Grid.Column="0" Grid.Row="7" Margin="0,8,0,8" Content="Podatek"/>
         <TextBox Grid.Column="1" Grid.Row="7" Margin="0,8,0,8"/>
 
-        <Label Grid.Column="0" Grid.Row="7" Margin="0,8,0,8" Content="Ilość Sztuk"/>
-        <TextBox Grid.Column="1" Grid.Row="7" Margin="0,8,0,8"/>
+        <Label Grid.Column="0" Grid.Row="8" Margin="0,8,0,8" Content="Ilość Sztuk"/>
+        <TextBox Grid.Column="1" Grid.Row="8" Margin="0,8,0,8"/>
 
-        <Label Grid.Column="0" Grid.Row="8" Margin="0,8,0,8" Content="Id Statusu Płatności"/>
-        <TextBox Grid.Column="1" Grid.Row="8" Margin="0,8,0,8"/>      
+        <Label Grid.Column="0" Grid.Row="9" Margin="0,8,0,8" Content="Id Statusu Płatności"/>
+        <TextBox Grid.Column="1" Grid.Row="9" Margin="0,8,0,8"/>
 
     </Grid>
 </local:JedenViewBase>

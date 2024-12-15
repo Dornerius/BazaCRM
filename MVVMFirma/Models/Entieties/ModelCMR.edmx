@@ -42,7 +42,7 @@
           <Property Name="OsobowoscPrawna" Type="nvarchar" MaxLength="50" />
           <Property Name="Email" Type="nvarchar" MaxLength="50" />
           <Property Name="telefon" Type="int" />
-          <Property Name="Województwo" Type="varchar" MaxLength="50" />
+          <Property Name="Wojewodztwo" Type="varchar" MaxLength="50" />
           <Property Name="KodPocztowy" Type="nvarchar" MaxLength="50" />
           <Property Name="Powiat" Type="varchar" MaxLength="50" />
           <Property Name="Miejscowosc" Type="varchar" MaxLength="50" />
@@ -1784,7 +1784,7 @@
                 <ScalarProperty Name="OsobowoscPrawna" ColumnName="OsobowoscPrawna" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="telefon" ColumnName="telefon" />
-                <ScalarProperty Name="Wojewodztwo" ColumnName="Województwo" />
+                <ScalarProperty Name="Wojewodztwo" ColumnName="Wojewodztwo" />
                 <ScalarProperty Name="KodPocztowy" ColumnName="KodPocztowy" />
                 <ScalarProperty Name="Powiat" ColumnName="Powiat" />
                 <ScalarProperty Name="Miejscowosc" ColumnName="Miejscowosc" />

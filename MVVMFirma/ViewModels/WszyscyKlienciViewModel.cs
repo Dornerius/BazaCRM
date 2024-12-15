@@ -7,26 +7,61 @@ using MVVMFirma.Models.Entieties;
 using MVVMFirma.Helper;
 using System.Windows.Input;
 using System.Net;
+using System.Runtime.CompilerServices;
 
 namespace MVVMFirma.ViewModels
 {
-    public class WszyscyKlienciViewModel : WszystkieViewModel<Klienci>
+    public class WszyscyKlienciViewModel : WorkspaceViewModel
     {
-        
-
-        #region Constructor
-        public WszyscyKlienciViewModel()
-            :base("Klienci")
-            { 
+        #region DB
+        private readonly BazaCRMEntities bazaCRMEntities;
+        #endregion
+        #region LoadCommand
+        private BaseCommand _LoadCommand;
+        public ICommand LoadCommand
+        {
+            get
+            {
+                if (_LoadCommand == null)
+                    _LoadCommand = new BaseCommand(() => load());
+                return _LoadCommand;
             }
+        }
+        #endregion
+        #region List
+        private ObservableCollection<Klienci> _List;
+
+        public ObservableCollection<Klienci> List
+        {
+            get 
+            {
+                if (_List == null)
+                    load();
+                return _List;
+            }
+            set 
+            {
+                _List = value;
+                OnPropertyChanged(()=>List);
+            }
+        }
+        #endregion
+        #region Constructor
+        public WszyscyKlienciViewModel() 
+        {
+            base.DisplayName = "Wszyscy Klienci";
+            bazaCRMEntities = new BazaCRMEntities();
+        }
+       
         #endregion
         #region Helpers
-
-        //public override void Load() => List = new ObservableCollection<Klienci>
-                //(
-                    //bazaCRMEntities.Klienci.ToList()
-               // );
-
+        private void load() 
+        {
+            List=new ObservableCollection<Klienci>
+                (
+                    bazaCRMEntities.Klienci.ToList()
+                );
+        }
         #endregion
 
     }
