@@ -49,9 +49,7 @@ namespace MVVMFirma.ViewModels
         #region Constructor
         public NowaFakturaViewModel()
         {
-            base.DisplayName = "Wystaw Fakturę";
-            BazaCRMEntities = new BazaCRMEntities();
-            faktury = new Faktury();
+            
         }
         #region Properties
 
