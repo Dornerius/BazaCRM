@@ -49,7 +49,16 @@ namespace MVVMFirma.ViewModels
 
                 new CommandViewModel(
                     "Wystaw Fakturę",
-                    new BaseCommand(() => this.CreateView(new NowaFakturaViewModel())))
+                    new BaseCommand(() => this.CreateView(new NowaFakturaViewModel()))),
+
+                new CommandViewModel(
+                    "Nowy Użytkownik",
+                    new BaseCommand(() => this.CreateView(new NowyUzytkownikViewModel()))),
+
+                new CommandViewModel(
+                    "Użytkownicy",
+                    new BaseCommand(() => this.ShowAllView<WszyscyUzytkownicyViewModel>())),
+
             };
         }
         #endregion

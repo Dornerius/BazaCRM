@@ -1,0 +1,44 @@
+﻿<local:JedenViewBase x:Class="MVVMFirma.Views.NowyUzytkownikView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MVVMFirma.Views" xmlns:viewmodels="clr-namespace:MVVMFirma.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:NowyKlientViewModel}"
+                     mc:Ignorable="d" 
+             d:DesignHeight="416" Width="910">
+    <Grid Background="White" HorizontalAlignment="Stretch" Height="NaN" Margin="0,2,0,2" VerticalAlignment="Stretch" Width="NaN">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>            
+            <ColumnDefinition Width="150"/>            
+            <ColumnDefinition Width="150"/>            
+            <ColumnDefinition Width="150"/>            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Grid.Row="0" Margin="0,8,0,8" Content="Imie"/>
+        <TextBox Grid.Column="1" Grid.Row="0" Margin="0,8,0,8" Text="{Binding Path=Imie, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Label Grid.Column="0" Grid.Row="1" Margin="0,8,0,8" Content="Nazwisko"/>
+        <TextBox Grid.Column="1" Grid.Row="1" Margin="0,8,0,8" Text="{Binding Path=Nazwisko, UpdateSourceTrigger=PropertyChanged}" />
+
+        <Label Grid.Column="0" Grid.Row="2" Margin="0,8,0,8" Content="Adres e-mail"/>
+        <TextBox Grid.Column="1" Grid.Row="2" Margin="0,8,0,8" Text="{Binding Path=Email, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Label Grid.Column="0" Grid.Row="3" Margin="0,8,0,8" Content="Nr Telefonu"/>
+        <TextBox Grid.Column="1" Grid.Row="3" Margin="0,8,0,8" Text="{Binding Path=Telefon, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Label Grid.Column="0" Grid.Row="4" Margin="0,8,0,8" Content="Rola"/>
+        <TextBox Grid.Column="1" Grid.Row="4" Margin="0,8,0,8" Text="{Binding Path=Rola, UpdateSourceTrigger=PropertyChanged}"/>
+
+        </Grid>
+</local:JedenViewBase>

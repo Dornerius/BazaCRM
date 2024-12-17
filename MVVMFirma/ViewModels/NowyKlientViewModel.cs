@@ -11,10 +11,7 @@ namespace MVVMFirma.ViewModels
 
     public class NowyKlientViewModel : WorkspaceViewModel
     {
-        //public NowyKlientViewModel()
-        //{
-        //    base.DisplayName = "Dodaj Nowego Klienta";
-        //}
+        
         #region DB
         private BazaCRMEntities BazaCRMEntities;
 
@@ -24,15 +21,28 @@ namespace MVVMFirma.ViewModels
 
         #endregion
         #region Command
-        private BaseCommand _SaveCommand;
+        private BaseCommand _SaveCommand;          
+    
         public ICommand SaveCommand
         {
             get
             {
                 if (_SaveCommand == null)
-                    _SaveCommand = new BaseCommand(() => Save());
+                    _SaveCommand = new BaseCommand(() => save());
                 return _SaveCommand;
             }
+        }
+        private BaseCommand _SaveAndCloseCommand;
+
+        public ICommand SaveAndCloseCommand
+        {
+
+            get 
+            { 
+                if (_SaveAndCloseCommand == null)
+                    _SaveAndCloseCommand = new BaseCommand(() => SaveAndClose());
+                return _SaveAndCloseCommand; 
+            } 
         }
         #endregion
         #region Constructor
@@ -257,11 +267,17 @@ namespace MVVMFirma.ViewModels
             BazaCRMEntities.Klienci.Add(klienci);
             BazaCRMEntities.SaveChanges();
         }
-        public void SaveAndClole()
+        public void SaveAndClose()
         {
             Save();
             base.OnRequestClose();
         }
+        public void save()
+        {
+            Save();
+        }
+
+      
         #endregion
 
     }

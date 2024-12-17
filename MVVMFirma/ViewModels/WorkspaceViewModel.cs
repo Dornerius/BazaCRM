@@ -11,6 +11,7 @@ namespace MVVMFirma.ViewModels
     {
         #region Fields
         private BaseCommand _CloseCommand;
+        private BaseCommand _SaveAndCloseCommand;
         #endregion 
 
         #region Constructor
@@ -29,7 +30,8 @@ namespace MVVMFirma.ViewModels
                 return _CloseCommand;
             }
         }
-        #endregion 
+        #endregion
+        
 
         #region RequestClose [event]
         public event EventHandler RequestClose;

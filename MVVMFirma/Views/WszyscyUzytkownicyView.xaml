@@ -1,0 +1,28 @@
+﻿<local:WszystkieViewBase x:Class="MVVMFirma.Views.WszyscyUzytkownicyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:MVVMFirma.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="600">
+
+    <Grid Background="Aqua">
+        <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding List}" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id Uzytkownika" Binding="{Binding IdUzytkownika}"/>
+                <DataGridTextColumn Header="Id Projektu" Binding="{Binding IdProjektu}"/>
+                <DataGridTextColumn Header="Imie" Binding="{Binding Imie}"/>
+                <DataGridTextColumn Header="Nazwisko" Binding="{Binding Nazwisko}"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                <DataGridTextColumn Header="Telefon" Binding="{Binding Telefon}"/>
+                <DataGridTextColumn Header="Id Szkolenia" Binding="{Binding IdSzkolenia}"/>
+                <DataGridTextColumn Header="Id Zespolu" Binding="{Binding IdZespolu}"/>
+                <DataGridTextColumn Header="Id Zadania" Binding="{Binding IdZadania}"/>
+                <DataGridTextColumn Header="Rola" Binding="{Binding Rola}"/>
+                <DataGridTextColumn Header="Id Klienta" Binding="{Binding IdKlienta}"/>
+                </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+    
+</local:WszystkieViewBase>
