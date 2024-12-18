@@ -8,7 +8,25 @@
     </DataTemplate>
     <DataTemplate DataType="{x:Type vm:NowyKlientViewModel}">
         <vw:NowyKlientView/>
-    </DataTemplate>    
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:WszystkieProjektyViewModel}">
+        <vw:WszystkieProjektyView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:NowyProjektViewModel}">
+        <vw:NowyProjektView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:WszyscyProduktyViewModel}">
+        <vw:WszystkieProduktyView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:NowyProduktViewModel}">
+        <vw:NowyProduktView/>
+        </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:WszystkieTransakcjeViewModel}">
+        <vw:WszystkieTransakcjeView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:NowaTransakcjaViewModel}">
+        <vw:NowaTransakcjaView/>
+    </DataTemplate>
     <DataTemplate DataType="{x:Type vm:WszystkieFakturyViewModel}">
         <vw:WszystkieFakturyView/>
     </DataTemplate>
@@ -20,6 +38,12 @@
     </DataTemplate>
     <DataTemplate DataType="{x:Type vm:WszyscyUzytkownicyViewModel}">
         <vw:WszyscyUzytkownicyView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:NowyZespolViewModel}">
+        <vw:NowyZespolView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:WszystkieZespolyViewModel }">
+        <vw:WszystkieZespolyView/>
     </DataTemplate>
 
     <Style x:Key="MainHCCStyle" TargetType="{x:Type HeaderedContentControl}">

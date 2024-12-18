@@ -9,7 +9,7 @@ using System.Windows.Input;
 namespace MVVMFirma.ViewModels
 {
 
-    public class NowyUzytkownikViewModel : WorkspaceViewModel
+    public class NowaTransakcjaViewModel : WorkspaceViewModel
     {
 
         #region DB
@@ -17,7 +17,7 @@ namespace MVVMFirma.ViewModels
 
         #endregion
         #region Item
-        private Uzytkownicy Uzytkownicy;
+        private Transakcje Transakcje;
 
         #endregion
         #region Command
@@ -45,95 +45,84 @@ namespace MVVMFirma.ViewModels
         }
         #endregion
         #region Constructor
-        public NowyUzytkownikViewModel()
+        public NowaTransakcjaViewModel()
         {
-            base.DisplayName = "Dodaj Użytkownika";
+            base.DisplayName = "Nowa Transakcja";
             BazaCRMEntities = new BazaCRMEntities();
-            Uzytkownicy = new Uzytkownicy();
+            Transakcje = new Transakcje();
         }
         #endregion
         #region Properties
-        public string Imie
+        public string RodzajTransakcji
         {
             get
             {
-                return Uzytkownicy.Imie;
+                return Transakcje.RodzajTransakcji;
             }
             set
             {
-                Uzytkownicy.Imie = value;
-                OnPropertyChanged(() => Imie);
+                Transakcje.RodzajTransakcji = value;
+                OnPropertyChanged(() => RodzajTransakcji);
             }
         }
-        public string Nazwisko
+        public DateTime? DataTransakcji
         {
             get
             {
-                return Uzytkownicy.Nazwisko;
+                return Transakcje.DataTransakcji;
             }
             set
             {
-                Uzytkownicy.Nazwisko = value;
-                OnPropertyChanged(() => Uzytkownicy);
+                Transakcje.DataTransakcji = value;
+                OnPropertyChanged(() => DataTransakcji);
             }
         }
-        public string Email
+        public Decimal? KwotaTransakcji
+                    {
+            get
+            {
+                return Transakcje.KwotaTransakcji;
+                           
+            }
+            set
+            {
+                Transakcje.KwotaTransakcji = value;
+                OnPropertyChanged(() => KwotaTransakcji);
+            }
+        }
+        public string DodatkoweInformacje
         {
             get
             {
-                return Uzytkownicy.Email;
+                return Transakcje.DodatkoweInformacje;
             }
             set
             {
-                Uzytkownicy.Email = value;
-                OnPropertyChanged(() => Email);
+                Transakcje.DodatkoweInformacje = value;
+                OnPropertyChanged(() => DodatkoweInformacje);
             }
         }
-        public int? Telefon
-        {
-            get
-            {
-                return Uzytkownicy.Telefon;
-            }
-            set
-            {
-                Uzytkownicy.Telefon = value;
-                OnPropertyChanged(() => Telefon);
-            }
-        }
-        public string Rola
-        {
-            get
-            {
-                return Uzytkownicy.Rola;
-            }
-            set
-            {
-                Uzytkownicy.Rola = value;
-                OnPropertyChanged(() => Rola);
-            }
-        }
-        
+
         #endregion
 
         #region Helpers
 
         public void Save()
         {
-            BazaCRMEntities.Uzytkownicy.Add(Uzytkownicy);
+            BazaCRMEntities.Transakcje.Add(Transakcje);
             BazaCRMEntities.SaveChanges();
         }
         public void SaveAndClose()
         {
             Save();
-            base.OnRequestClose();            
+            base.OnRequestClose();
         }
 
-        public  void save()
+        public void save()
         {
             Save();
         }
-                #endregion
+        #endregion
 
     }
 }

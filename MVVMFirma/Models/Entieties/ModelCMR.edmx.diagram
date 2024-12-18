@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="ece5b69d4a02402d9dec1b0c56b2b615" Name="Diagram1" ZoomLevel="111">
+      <Diagram DiagramId="ece5b69d4a02402d9dec1b0c56b2b615" Name="Diagram1" ZoomLevel="208">
         <EntityTypeShape EntityType="BazaCRMModel.Faktury" Width="1.5" PointX="10.5" PointY="13.25" IsExpanded="true" />
         <EntityTypeShape EntityType="BazaCRMModel.InterakcjeKlientow" Width="1.5" PointX="13.5" PointY="14" IsExpanded="true" />
         <EntityTypeShape EntityType="BazaCRMModel.Klienci" Width="1.5" PointX="8.25" PointY="11.5" IsExpanded="true" />

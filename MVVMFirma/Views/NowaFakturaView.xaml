@@ -9,7 +9,7 @@
     <Grid Background="AliceBlue" HorizontalAlignment="Stretch" Height="NaN" Margin="0,2,0,2" VerticalAlignment="Stretch" Width="NaN">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="125"/>
-            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
@@ -18,40 +18,24 @@
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
-        <Label Grid.Column="0" Grid.Row="0" Margin="0,8,0,8" Content="Id Faktury"/>
-        <TextBox Grid.Column="1" Grid.Row="0" Margin="0,8,0,8"/>
+        <Label Grid.Column="0" Grid.Row="0" Margin="0,8,0,8" Content="Nr Faktury"/>
+        <TextBox Grid.Column="1" Grid.Row="0" Margin="0,8,0,8" Text="{Binding Path=NrFaktury, UpdateSourceTrigger=PropertyChanged}"/>
+      
+        <Label Grid.Column="0" Grid.Row="1" Margin="0,8,0,8" Content="Data Wystawienia"/>
+        <TextBox Grid.Column="1" Grid.Row="1" Margin="0,8,0,8" Text="{Binding Path=DataWystawienia, UpdateSourceTrigger=PropertyChanged}"/>
+       
+        <Label Grid.Column="0" Grid.Row="2" Margin="0,8,0,8" Content="Kwota Netto"/>
+        <TextBox Grid.Column="1" Grid.Row="2" Margin="0,8,0,8" Text="{Binding Path=KwotaNetto, UpdateSourceTrigger=PropertyChanged}"/>
 
-        <Label Grid.Column="0" Grid.Row="1" Margin="0,8,0,8" Content="Id Produktu Usługi"/>
-        <TextBox Grid.Column="1" Grid.Row="1" Margin="0,8,0,8"/>
+        <Label Grid.Column="0" Grid.Row="3" Margin="0,8,0,8" Content="Kwota Brutto"/>
+        <TextBox Grid.Column="1" Grid.Row="3" Margin="0,8,0,8" Text="{Binding Path=KwotaBrutto, UpdateSourceTrigger=PropertyChanged}"/>
 
-        <Label Grid.Column="0" Grid.Row="2" Margin="0,8,0,8" Content="Id Rodzaju Płatnosci"/>
-        <TextBox Grid.Column="1" Grid.Row="2" Margin="0,8,0,8"/>
+        <Label Grid.Column="0" Grid.Row="4" Margin="0,8,0,8" Content="Podatek"/>
+        <TextBox Grid.Column="1" Grid.Row="4" Margin="0,8,0,8" Text="{Binding Path=Podatek, UpdateSourceTrigger=PropertyChanged}"/>
 
-        <Label Grid.Column="0" Grid.Row="3" Margin="0,8,0,8" Content="Data Wystawienia"/>
-        <TextBox Grid.Column="1" Grid.Row="3" Margin="0,8,0,8"/>
-
-        <Label Grid.Column="0" Grid.Row="4" Margin="0,8,0,8" Content="Id Klienta"/>
-        <TextBox Grid.Column="1" Grid.Row="4" Margin="0,8,0,8"/>
-
-        <Label Grid.Column="0" Grid.Row="5" Margin="0,8,0,8" Content="Kwota Netto"/>
-        <TextBox Grid.Column="1" Grid.Row="5" Margin="0,8,0,8"/>
-
-        <Label Grid.Column="0" Grid.Row="6" Margin="0,8,0,8" Content="Kwota Brutto"/>
-        <TextBox Grid.Column="1" Grid.Row="6" Margin="0,8,0,8"/>
-
-        <Label Grid.Column="0" Grid.Row="7" Margin="0,8,0,8" Content="Podatek"/>
-        <TextBox Grid.Column="1" Grid.Row="7" Margin="0,8,0,8"/>
-
-        <Label Grid.Column="0" Grid.Row="8" Margin="0,8,0,8" Content="Ilość Sztuk"/>
-        <TextBox Grid.Column="1" Grid.Row="8" Margin="0,8,0,8"/>
-
-        <Label Grid.Column="0" Grid.Row="9" Margin="0,8,0,8" Content="Id Statusu Płatności"/>
-        <TextBox Grid.Column="1" Grid.Row="9" Margin="0,8,0,8"/>
+        <Label Grid.Column="0" Grid.Row="5" Margin="0,8,0,8" Content="Ilosc Sztuk"/>
+        <TextBox Grid.Column="1" Grid.Row="5" Margin="0,8,0,8" Text="{Binding Path=IloscSztuk, UpdateSourceTrigger=PropertyChanged}"/>
 
     </Grid>
 </local:JedenViewBase>

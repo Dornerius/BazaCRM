@@ -9,7 +9,7 @@ using System.Windows.Input;
 namespace MVVMFirma.ViewModels
 {
 
-    public class NowyUzytkownikViewModel : WorkspaceViewModel
+    public class NowyProduktViewModel : WorkspaceViewModel
     {
 
         #region DB
@@ -17,7 +17,7 @@ namespace MVVMFirma.ViewModels
 
         #endregion
         #region Item
-        private Uzytkownicy Uzytkownicy;
+        private ProduktyUslugi ProduktyUslugi;
 
         #endregion
         #region Command
@@ -45,72 +45,49 @@ namespace MVVMFirma.ViewModels
         }
         #endregion
         #region Constructor
-        public NowyUzytkownikViewModel()
+        public NowyProduktViewModel()
         {
-            base.DisplayName = "Dodaj Użytkownika";
+            base.DisplayName = "Dodaj Produkt, Usługę";
             BazaCRMEntities = new BazaCRMEntities();
-            Uzytkownicy = new Uzytkownicy();
+            ProduktyUslugi = new ProduktyUslugi();
         }
         #endregion
         #region Properties
-        public string Imie
+        public string Nazwa
         {
             get
             {
-                return Uzytkownicy.Imie;
+                return ProduktyUslugi.Nazwa;
             }
             set
             {
-                Uzytkownicy.Imie = value;
-                OnPropertyChanged(() => Imie);
+                ProduktyUslugi.Nazwa = value;
+                OnPropertyChanged(() => Nazwa);
             }
         }
-        public string Nazwisko
+        public string Opis
         {
             get
             {
-                return Uzytkownicy.Nazwisko;
+                return ProduktyUslugi.Opis;
             }
             set
             {
-                Uzytkownicy.Nazwisko = value;
-                OnPropertyChanged(() => Uzytkownicy);
+                ProduktyUslugi.Opis = value;
+                OnPropertyChanged(() => ProduktyUslugi);
             }
         }
-        public string Email
+        public decimal? Cena
         {
             get
             {
-                return Uzytkownicy.Email;
+                return ProduktyUslugi.Cena;
+                           
             }
             set
             {
-                Uzytkownicy.Email = value;
-                OnPropertyChanged(() => Email);
-            }
-        }
-        public int? Telefon
-        {
-            get
-            {
-                return Uzytkownicy.Telefon;
-            }
-            set
-            {
-                Uzytkownicy.Telefon = value;
-                OnPropertyChanged(() => Telefon);
-            }
-        }
-        public string Rola
-        {
-            get
-            {
-                return Uzytkownicy.Rola;
-            }
-            set
-            {
-                Uzytkownicy.Rola = value;
-                OnPropertyChanged(() => Rola);
+                ProduktyUslugi.Cena = value;
+                OnPropertyChanged(() => Cena);
             }
         }
         
@@ -120,20 +97,20 @@ namespace MVVMFirma.ViewModels
 
         public void Save()
         {
-            BazaCRMEntities.Uzytkownicy.Add(Uzytkownicy);
+            BazaCRMEntities.ProduktyUslugi.Add(ProduktyUslugi);
             BazaCRMEntities.SaveChanges();
         }
         public void SaveAndClose()
         {
             Save();
-            base.OnRequestClose();            
+            base.OnRequestClose();
         }
 
-        public  void save()
+        public void save()
         {
             Save();
         }
-                #endregion
+        #endregion
 
     }
 }

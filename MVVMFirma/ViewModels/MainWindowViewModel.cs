@@ -44,6 +44,30 @@ namespace MVVMFirma.ViewModels
                     new BaseCommand(() => this.CreateView(new NowyKlientViewModel()))),
 
                 new CommandViewModel(
+                    "Projekty",
+                    new BaseCommand(() => this.ShowAllView<WszystkieProjektyViewModel>())),
+
+                new CommandViewModel(
+                    "Nowy Projekt",
+                    new BaseCommand(() => this.CreateView(new NowyProjektViewModel()))),
+
+                new CommandViewModel(
+                    "Produkty i Usługi",
+                    new BaseCommand(() => this.ShowAllView<WszyscyProduktyViewModel>())),
+
+                new CommandViewModel(
+                    "Nowy Produkt, Usługa",
+                    new BaseCommand(() => this.CreateView(new NowyProduktViewModel()))),
+
+                new CommandViewModel(
+                    "Transakcje",
+                    new BaseCommand(() => this.ShowAllView<WszystkieTransakcjeViewModel>())),
+
+                new CommandViewModel(
+                    "Nowa Transakcja",
+                    new BaseCommand(() => this.CreateView(new NowaTransakcjaViewModel()))),
+
+                new CommandViewModel(
                     "Wszystkie Faktury",
                     new BaseCommand(() => this.ShowAllView<WszystkieFakturyViewModel>())),
 
@@ -58,6 +82,14 @@ namespace MVVMFirma.ViewModels
                 new CommandViewModel(
                     "Użytkownicy",
                     new BaseCommand(() => this.ShowAllView<WszyscyUzytkownicyViewModel>())),
+
+                new CommandViewModel(
+                    "Dodaj Zespół",
+                    new BaseCommand(() => this.CreateView(new NowyZespolViewModel()))),
+
+                new CommandViewModel(
+                    "Zwspoły",
+                    new BaseCommand(() => this.ShowAllView<WszystkieZespolyViewModel>())),
 
             };
         }

@@ -9,7 +9,7 @@ using System.Windows.Input;
 namespace MVVMFirma.ViewModels
 {
 
-    public class NowyUzytkownikViewModel : WorkspaceViewModel
+    public class NowyZespolViewModel : WorkspaceViewModel
     {
 
         #region DB
@@ -17,7 +17,7 @@ namespace MVVMFirma.ViewModels
 
         #endregion
         #region Item
-        private Uzytkownicy Uzytkownicy;
+        private Zespoly Zespoly;
 
         #endregion
         #region Command
@@ -45,82 +45,46 @@ namespace MVVMFirma.ViewModels
         }
         #endregion
         #region Constructor
-        public NowyUzytkownikViewModel()
+        public NowyZespolViewModel()
         {
-            base.DisplayName = "Dodaj Użytkownika";
+            base.DisplayName = "Dodaj Zespół";
             BazaCRMEntities = new BazaCRMEntities();
-            Uzytkownicy = new Uzytkownicy();
+            Zespoly = new Zespoly();
         }
         #endregion
         #region Properties
-        public string Imie
+        public string Nazwa
         {
             get
             {
-                return Uzytkownicy.Imie;
+                return Zespoly.Nazwa;
             }
             set
             {
-                Uzytkownicy.Imie = value;
-                OnPropertyChanged(() => Imie);
+                Zespoly.Nazwa = value;
+                OnPropertyChanged(() => Zespoly);
             }
         }
-        public string Nazwisko
+        public string Opis
         {
             get
             {
-                return Uzytkownicy.Nazwisko;
+                return Zespoly.Opis;
             }
             set
             {
-                Uzytkownicy.Nazwisko = value;
-                OnPropertyChanged(() => Uzytkownicy);
+                Zespoly.Opis = value;
+                OnPropertyChanged(() => Zespoly);
             }
         }
-        public string Email
-        {
-            get
-            {
-                return Uzytkownicy.Email;
-            }
-            set
-            {
-                Uzytkownicy.Email = value;
-                OnPropertyChanged(() => Email);
-            }
-        }
-        public int? Telefon
-        {
-            get
-            {
-                return Uzytkownicy.Telefon;
-            }
-            set
-            {
-                Uzytkownicy.Telefon = value;
-                OnPropertyChanged(() => Telefon);
-            }
-        }
-        public string Rola
-        {
-            get
-            {
-                return Uzytkownicy.Rola;
-            }
-            set
-            {
-                Uzytkownicy.Rola = value;
-                OnPropertyChanged(() => Rola);
-            }
-        }
-        
+       
         #endregion
 
         #region Helpers
 
         public void Save()
         {
-            BazaCRMEntities.Uzytkownicy.Add(Uzytkownicy);
+            BazaCRMEntities.Zespoly.Add(Zespoly);
             BazaCRMEntities.SaveChanges();
         }
         public void SaveAndClose()

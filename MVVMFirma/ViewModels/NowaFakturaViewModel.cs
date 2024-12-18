@@ -2,6 +2,7 @@
 using MVVMFirma.Models.Entieties;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Resources;
 using System.Runtime.Remoting.Channels;
@@ -40,7 +41,7 @@ namespace MVVMFirma.ViewModels
         {
             get
             {
-                if (SaveAndCloseCommand == null)
+                if (_SaveAndCloseCommand == null)
                     _SaveAndCloseCommand = new BaseCommand(() => SaveAndClose());
                 return _SaveAndCloseCommand;
             }
@@ -49,11 +50,100 @@ namespace MVVMFirma.ViewModels
         #region Constructor
         public NowaFakturaViewModel()
         {
-            
+            base.DisplayName = "Wystaw Fakturę";
+            BazaCRMEntities = new BazaCRMEntities();
+            faktury = new Faktury();
         }
         #region Properties
 
-        public string 
+        public string NrFaktury
+        {
+            get
+            {
+                return faktury.NrFaktury;
+
+            }
+
+            set
+            {
+                faktury.NrFaktury = value;
+                OnPropertyChanged(() => NrFaktury);
+            }
+        }
+
+        public DateTime? DataWystawienia
+        {
+            get
+            {
+                return faktury.DataWystawienia;
+            }
+
+            set
+            {
+                faktury.DataWystawienia = value;
+                OnPropertyChanged(() => DataWystawienia);
+            }
+
+        }
+
+        public decimal? KwotaNetto
+        {
+            get
+            {
+                return faktury.KwotaNetto;
+            }
+
+            set
+            {
+                faktury.KwotaNetto = value;
+                OnPropertyChanged(() => KwotaNetto);
+            }
+
+        }
+
+        public decimal? KwotaBrutto
+        {
+            get
+            {
+                return faktury.KwotaBrutto;
+            }
+
+            set
+            {
+                faktury.KwotaBrutto = value;
+                OnPropertyChanged(() => KwotaBrutto);
+            }
+
+        }
+
+        public int? Podatek
+        {
+            get 
+            {
+                return faktury.Podatek;
+
+            }
+
+            set
+            {
+                faktury.Podatek = value;
+                OnPropertyChanged(() => Podatek);
+            }
+        }
+
+        public  int? IloscSztuk
+        {
+            get
+            {
+                return faktury.IloscSztuk;
+            }
+
+            set
+            {
+                faktury.IloscSztuk = value; 
+                OnPropertyChanged(() => IloscSztuk);
+            }
+        }
         #endregion
         #endregion
         #region Helpers

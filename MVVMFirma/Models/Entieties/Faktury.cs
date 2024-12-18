@@ -24,6 +24,7 @@ namespace MVVMFirma.Models.Entieties
         public Nullable<int> Podatek { get; set; }
         public Nullable<int> IloscSztuk { get; set; }
         public Nullable<int> IdStatusuFaktury { get; set; }
+        public string NrFaktury { get; set; }
     
         public virtual Klienci Klienci { get; set; }
         public virtual ProduktyUslugi ProduktyUslugi { get; set; }

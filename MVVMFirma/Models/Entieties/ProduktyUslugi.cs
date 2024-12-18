@@ -22,9 +22,9 @@ namespace MVVMFirma.Models.Entieties
         }
     
         public int IdProduktuUslugi { get; set; }
-        public string Nazawa { get; set; }
         public string Opis { get; set; }
         public Nullable<decimal> Cena { get; set; }
+        public string Nazwa { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Faktury> Faktury { get; set; }

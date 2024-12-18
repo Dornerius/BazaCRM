@@ -11,7 +11,6 @@ namespace MVVMFirma.ViewModels
     {
         #region Fields
         private BaseCommand _CloseCommand;
-        private BaseCommand _SaveAndCloseCommand;
         #endregion 
 
         #region Constructor
