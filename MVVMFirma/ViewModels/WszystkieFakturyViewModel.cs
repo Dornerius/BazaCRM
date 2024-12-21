@@ -7,10 +7,11 @@ using MVVMFirma.Models.Entieties;
 using MVVMFirma.Helper;
 using System.Windows.Input;
 using System.Net;
+using MVVMFirma.Models.EntitiesForView;
 
 namespace MVVMFirma.ViewModels
 {
-    public class WszystkieFakturyViewModel : WszystkieViewModel<Faktury>
+    public class WszystkieFakturyViewModel : WszystkieViewModel<FakturyForAllView>
     {
 
 
@@ -24,9 +25,25 @@ namespace MVVMFirma.ViewModels
 
         public override void Load()
         {
-            List = new ObservableCollection<Faktury>
+            List = new ObservableCollection<FakturyForAllView>
                 (
-                    bazaCRMEntities.Faktury.ToList()
+                    from faktury in bazaCRMEntities.Faktury
+                    select new FakturyForAllView
+                    {
+                        IdFaktury=faktury.IdFaktury,
+                        NrFaktury=faktury.NrFaktury,
+                        DataWystawienia=faktury.DataWystawienia,
+                        KlienciNazwaFirmy=faktury.Klienci.NazwaFirmy,
+                        ProduktyUslugiNazwa=faktury.ProduktyUslugi.Nazwa,
+                        ProduktyUslugiCena = faktury.ProduktyUslugi.Cena,
+                        IloscSztuk=faktury.IloscSztuk,
+                        KwotaNetto=faktury.KwotaNetto,
+                        Podatek=faktury.Podatek,
+                        KwotaBrutto=faktury.KwotaBrutto,
+                        RodzajPlatnosciNazwaRodzajuPlatnosci=faktury.RodzajePlatnosci.NazwaRodzajuPlatnosci,
+                        StatusFakturyNazwaStatusu=faktury.StatusFaktury.NazwaStatusu,
+
+                    }
                 );
         }
 

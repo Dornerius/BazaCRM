@@ -11,15 +11,17 @@
         <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding List}" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id Faktury" Binding="{Binding IdFaktury}"/>
-                <DataGridTextColumn Header="Id Produktu Uslugi" Binding="{Binding IdProduktuUslugi}"/>
-                <DataGridTextColumn Header="Id Rodzaju Platnosci" Binding="{Binding IdRodzajuPlatnosci}"/>
-                <DataGridTextColumn Header="Data Wystawienia" Binding="{Binding DataWystawienia}"/>
-                <DataGridTextColumn Header="Id Klienta" Binding="{Binding IdKlienta}"/>
-                <DataGridTextColumn Header="Kwota Netto" Binding="{Binding KwotaNetto}"/>
-                <DataGridTextColumn Header="Kwota Brutto" Binding="{Binding KwotaBrutto}"/>
-                <DataGridTextColumn Header="Podatek" Binding="{Binding Podatek}"/>
+                <DataGridTextColumn Header="Nr Faktury" Binding="{Binding NrFaktury}"/>
+                <DataGridTextColumn Header="Data Wystawienia Faktury" Binding="{Binding DataWystawienia}"/>
+                <DataGridTextColumn Header="Klient" Binding="{Binding KlienciNazwaFirmy}"/>
+                <DataGridTextColumn Header="Rodzaj Uslugi" Binding="{Binding ProduktyUslugiNazwa}"/>
+                <DataGridTextColumn Header="Cena Uslugi" Binding="{Binding ProduktyUslugiCena}"/>
                 <DataGridTextColumn Header="Ilosc sztuk" Binding="{Binding IloscSztuk}"/>
-                <DataGridTextColumn Header="Id Statusu Faktury" Binding="{Binding IdStatusuFaktury}"/>                
+                <DataGridTextColumn Header="Kwota Netto" Binding="{Binding KwotaNetto}"/>
+                <DataGridTextColumn Header="Podatek" Binding="{Binding Podatek}"/>
+                <DataGridTextColumn Header="Kwota Brutto" Binding="{Binding KwotaBrutto}"/>
+                <DataGridTextColumn Header="Rodzaj Platnosci" Binding="{Binding RodzajPlatnosciNazwaRodzajuPlatnosci}"/>
+                <DataGridTextColumn Header="Status Platnosci" Binding="{Binding StatusFakturyNazwaStatusu}"/>                
             </DataGrid.Columns>
         </DataGrid>
 

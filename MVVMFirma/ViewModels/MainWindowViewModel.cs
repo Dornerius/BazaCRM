@@ -83,13 +83,23 @@ namespace MVVMFirma.ViewModels
                     "Użytkownicy",
                     new BaseCommand(() => this.ShowAllView<WszyscyUzytkownicyViewModel>())),
 
+                
+                new CommandViewModel(
+                    "Zwspoły",
+                    new BaseCommand(() => this.ShowAllView<WszystkieZespolyViewModel>())), 
+                
                 new CommandViewModel(
                     "Dodaj Zespół",
                     new BaseCommand(() => this.CreateView(new NowyZespolViewModel()))),
 
+
                 new CommandViewModel(
-                    "Zwspoły",
-                    new BaseCommand(() => this.ShowAllView<WszystkieZespolyViewModel>())),
+                    "Interakcje Klientów",
+                    new BaseCommand(() => this.ShowAllView<WszystkieInterakcjeKlientowViewModel>())),
+                
+                new CommandViewModel(
+                    "Dodaj Interakcję klientów",
+                    new BaseCommand(() => this.CreateView(new NoweInterakcjeKlientowViewModel ()))),
 
             };
         }
